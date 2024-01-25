@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character set and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Set the title of the page -->
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>
+        <!-- Main title and game instructions -->
+        <h1>
+            Tic-Tac-Toe<br><em class="xo">X/O</em> <!-- H1 title-->
+        </h1>
+        <h2>
+            Let's jump into the game!<br><br>Instructions:
+        </h2>
+        <p>Place X somewhere on the field to start the game.
+            <br>Press <b>"Reset Game"</b> to play again.
+            <br>Enjoy!</p>
+    </header>
+    <main>   
+        <div class="content-container">
+            <div id="board" class="board">
+                <!-- Tic Tac Toe grid will be generated here dynamically -->
+            </div>
+            <button id="resetButton">Reset Game</button>
+        </div>
+    
+        <!-- Include JavaScript file -->
+        <script src="js/script.js"></script>
+    </main> 
+    <footer>
+        <!-- Display the author's name in the footer -->
+        <p><b>Author : Krisztofer Kugler</b></p>
+    </footer>    
+</body>
+</html>

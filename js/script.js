@@ -1,17 +1,17 @@
 // Define variables to keep track of game state
-let currentPlayer = 'X';
-let gameBoard = ['', '', '', '', '', '', '', '', ''];
-let gameInProgress = true;
-let intervalId; 
+let currentPlayer = 'X'; //Set current player
+let gameBoard = ['', '', '', '', '', '', '', '', '']; //Empty cells
+let gameInProgress = true; // Variable to track the game state
+let intervalId; // Variable to store the interval ID
 
 // Function to handle click events on the board
 function handleCellClick(index) {
     if (gameInProgress && gameBoard[index] === '' && !isGameOver()) {
         gameBoard[index] = currentPlayer;
-        isGameOver(); 
-        checkWinner(); 
+        isGameOver(); // Check for draw or winner to trigger Alert
+        checkWinner(); // Check for a winner before toggling the player
         updateBoard();
-        togglePlayer(); 
+        togglePlayer(); // Checks for the player
     }
 }
 
@@ -51,7 +51,7 @@ function aiMove() {
         isGameOver(); 
         checkWinner(); 
         updateBoard();
-        togglePlayer(); 
+        togglePlayer();
     }
 }
 

@@ -1,28 +1,59 @@
+/* Reset default margin and padding, set height to 100% */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
+/* Style for player X/O in red */
+.xo {
+    color: red;
+}
+
+/* Styling for the entire body */
 body {
     font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.744);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #000000;
+    color: white;
 }
 
+/* Center align text in the header */
+header {
+    text-align: center;
+}
+
+/* Styling for the main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Styling for the content container */
+.content-container {
+    text-align: center;
+}
+
+/* Styling for the game board */
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-gap: 5px;
-    background-color: #fff;
+    background-color: #000000;
     padding: 10px;
-    border: 2px solid #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffffff86;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
+
+/* Styling for each cell in the game board */
 .cell {
     width: 100px;
     height: 100px;
@@ -32,9 +63,18 @@ body {
     cursor: pointer;
 }
 
+/* Hover effect for cells */
 .cell:hover {
-    background-color: #eee;
+    background-color: #7e7e7e44;
 }
+
+/* Styling for the reset button */
 button {
     margin-top: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
