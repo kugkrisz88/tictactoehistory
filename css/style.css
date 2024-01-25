@@ -1,14 +1,16 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f0f0f0;
 }
 
@@ -32,4 +34,7 @@ body {
 
 .cell:hover {
     background-color: #eee;
+}
+button {
+    margin-top: 10px;
 }

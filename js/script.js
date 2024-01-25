@@ -35,7 +35,7 @@ function checkWinner() {
     
 }
 
-// Create the Tic Tac Toe grid dynamically
+// Create the Tic Tac Toe cells dynamically
 const boardElement = document.getElementById('board');
 for (let i = 0; i < 9; i++) {
     const cell = document.createElement('div');
@@ -43,3 +43,13 @@ for (let i = 0; i < 9; i++) {
     cell.addEventListener('click', () => handleCellClick(i));
     boardElement.appendChild(cell);
 }
+// Function to reset the game
+function resetGame() {
+    currentPlayer = 'X'; //Player X starts the game (later player "O" will be AI)
+    gameBoard = ['', '', '', '', '', '', '', '', ''];
+    updateBoard();
+}
+
+// Add event listener for the reset button
+const resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', resetGame);
