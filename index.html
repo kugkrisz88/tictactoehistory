@@ -3,22 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mainpagestyle.css">
+    <link rel="stylesheet" href="./css/mainpagestyle.css">
     <title>History of Tic Tac Toe</title>
 </head>
 <body>
     <header>
         <h1>History of Tic Tac Toe</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#historySection">Evolution</a></li>
+                <li><a href="#timelineSection">Timeline</a></li>
+                <li><a href="#referencesSection">References</a></li>
+                <li><a href="#aboutSection">About</a></li>
+                <li><a href="#strategiesSection">Strategies & Tips</a></li>
+                <li><a href="#interactiveSection">Play Tic Tac Toe</a></li>
+                <li><a href="#conclusionSection">Conclusion</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
+        <p id="introduction">
+            Welcome to the captivating journey through time and strategy ,the History of Tic Tac Toe.
+            Explore the evolution, discover game strategies, play the game, and learn about the rich legacy of this timeless classic.
+        </p>
+
         <section id="intro">
             <p>Welcome to the fascinating journey through the history of Tic Tac Toe. Click the button below to play!</p>
-            <button id="playButton">Click here to play some Tic-Tac-Toe</button>
+            <button onclick="window.open('./game.html', '_blank')">Click here to play some Tic-Tac-Toe</button>
+        </section>
+
+        <section id="historySection">
+            <h2>The Evolution of Tic Tac Toe</h2>
+            <p>Explore the journey of how Tic Tac Toe has evolved over the years.</p>
+            <img src="./media/tic_tac_toe_evolution.jpg" alt="Tic Tac Toe Evolution" width="200" height="200">
+            <p>From ancient times to modern digital platforms, the game has stood the test of time.</p>
+        </section>
+
+        <section id="timelineSection">
+            <h2>Tic Tac Toe Timeline</h2>
+            <ul id="timelineList">
+                <li>
+                    <strong>Prehistoric Era:</strong> Evidence suggests that an early form of Tic Tac Toe was played by ancient civilizations.
+                    <img src="./media/prehistoric_tic_tac_toe.jpg" alt="Prehistoric Tic Tac Toe" >
+                </li>
+                <li>
+                    <strong>18th Century:</strong> The game gained popularity in Europe and was known by different names.
+                    <img src="./media/18th_century_tic_tac_toe.jpg" alt="18th Century Tic Tac Toe" >
+                </li>
+                <li>
+                    <strong>20th Century:</strong> Tic Tac Toe became a classic pen-and-paper game played by people of all ages.
+                    <img src="./media/20th_century_tic_tac_toe.jpg" alt="20th Century Tic Tac Toe" >
+                </li>
+            </ul>
+        </section>
+
+        <section id="referencesSection">
+            <h2>References</h2>
+            <ul id="referencesList">
+                <li>
+                    <a href="https://www.history.com/" target="_blank">History.com - Tic Tac Toe Through the Ages</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">Wikipedia - Tic Tac Toe</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="aboutSection">
+            <h2>About Tic Tac Toe</h2>
+            <p>Tic Tac Toe, also known as Noughts and Crosses, is a classic game that has been enjoyed by people of all ages for centuries. It's a simple yet engaging game that transcends cultures and time periods. The basic rules involve players taking turns marking spaces in a 3x3 grid, aiming to form a line of three of their symbols.</p>
+            <p>Its simplicity and strategic depth have made it a timeless game, played on various mediums ranging from paper and pencil to digital platforms.</p>
+        </section>
+
+        <section id="strategiesSection">
+            <h2>Strategies & Tips</h2>
+            <ul>
+                <li><strong>Control the Center:</strong> Occupying the center square gives you more opportunities to create winning combinations.</li>
+                <li><strong>Block Your Opponent:</strong> If your opponent is close to winning, prioritize blocking their moves.</li>
+                <li><strong>Create Forks:</strong> Try to create situations where you have two potential ways to win, forcing your opponent to make a choice.</li>
+                <li><strong>Pay Attention to Opponent's Moves:</strong> Anticipate your opponent's strategy and adapt accordingly.</li>
+                <li><strong>Stay Flexible:</strong> Be ready to change your strategy based on how the game unfolds.</li>
+            </ul>
+        </section>
+
+        <section id="conclusionSection">
+            <h2>Conclusion</h2>
+            <p>The journey of Tic Tac Toe is not just a historical exploration but a celebration of a game that continues to bring joy and challenge to players worldwide. Whether you're a seasoned strategist or a casual gamer, Tic Tac Toe remains an iconic symbol of entertainment.</p>
+            <p>Thank you for joining us on this exploration of the history and evolution of Tic Tac Toe. Now, go ahead and enjoy a game yourself!</p>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 History of Tic Tac Toe</p>
+        <p><b>Author : Krisztofer Kugler</b><br>© 2024 History of Tic Tac Toe.</p>
     </footer>
-    
 </body>
 </html>

@@ -1,23 +1,76 @@
+/* General styles for the entire body */
 body {
-    background-color: #000;
+    background: linear-gradient(to bottom right, #000, #5d5d5d);
     color: #fff;
     font-family: 'Arial', sans-serif;
+    margin: 0;
 }
 
-header, main, footer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
+/* Styles for the header section, including title and navigation */
 header {
+    background: linear-gradient(to bottom right, #000000, #7b7b7b);
+    padding: 10px;
     text-align: center;
 }
 
+/* Title styles */
 h1 {
+    margin: 0;
     font-size: 2em;
 }
 
+/* Styles for navigation menu */
+nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Styles for the navigation list */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for individual navigation items */
+nav li {
+    margin: 0 15px;
+}
+
+/* Styles for navigation links */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Styles for navigation links on hover */
+nav a:hover {
+    color: #e74c3c; /* Red color on hover */
+}
+
+/* Styles for the main content section */
+main {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* Introduction paragraph styles */
+#introduction {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Styles for the play Tic Tac Toe section */
+#intro {
+    margin-top: 30px;
+}
+
+/* Button styles */
 button {
     padding: 10px 20px;
     background: linear-gradient(to right, red, black);
@@ -27,17 +80,89 @@ button {
     font-size: 1em;
 }
 
+/* Button styles on hover */
 button:hover {
     background: linear-gradient(to right, black, red);
 }
 
-#intro {
+/* Styles for various sections in the main content */
+#historySection,
+#timelineSection,
+#referencesSection,
+#aboutSection,
+#strategiesSection,
+#interactiveSection,
+#conclusionSection {
     text-align: center;
     margin-top: 50px;
 }
 
+/* Heading styles for different sections */
+#historySection h2,
+#timelineSection h2,
+#referencesSection h2,
+#aboutSection h2,
+#strategiesSection h2,
+#conclusionSection h2 {
+    font-size: 1.5em;
+}
+
+/* Paragraph styles for different sections */
+#historySection p,
+#timelineSection p,
+#referencesSection p,
+#aboutSection p,
+#strategiesSection ul,
+#conclusionSection p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Image styles for history and timeline sections */
+#historySection img,
+#timelineList img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* List styles for timeline and references sections */
+#timelineList,
+#referencesList {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px; 
+}
+
+/* List item styles for timeline and references sections */
+#timelineList li,
+#referencesList li {
+    margin-bottom: 15px;
+}
+
+/* Link styles for references section */
+#referencesList a {
+    color: #e74c3c; 
+}
+
+/* Footer styles */
 footer {
     text-align: center;
     margin-top: 50px;
     font-size: 0.8em;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 950px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
 }
