@@ -6,9 +6,11 @@ let gameBoard = ['', '', '', '', '', '', '', '', ''];
 function handleCellClick(index) {
     if (gameBoard[index] === '' && !isGameOver()) {
         gameBoard[index] = currentPlayer;
+        isGameOver(); 
+        checkWinner(); 
         updateBoard();
         togglePlayer();
-        checkWinner();
+        
     }
 }
 
@@ -27,20 +29,15 @@ function togglePlayer() {
 
 // Function to check if the game is over (either someone wins or it's a draw)
 function isGameOver() {
-    if (gameBoard.every(cell => cell !== '') || checkWinner()) {
-        if (checkWinner()) {
-            alert(getWinnerMessage());
-        } else {
-            alert("It's a draw!");
-        }
+    if (checkWinner()) {
+        alert(getWinnerMessage());
+        return true;
+    } else if (gameBoard.every(cell => cell !== '')) {
+        alert("It's a draw!");
         return true;
     }
-    return false;
-}
 
-// Function to get the winner message
-function getWinnerMessage() {
-    return currentPlayer === 'X' ? 'You win!' : 'Computer wins!';
+    return false;
 }
 
 // Logic to check rows, columns, and diagonals for a winner
@@ -81,6 +78,17 @@ function checkWinner() {
 
     return false;
 }
+
+
+// Function to get the winner message
+function getWinnerMessage() {
+    if (currentPlayer === 'X') {
+        return 'You win!';
+    } else {
+        return 'Computer wins!';
+    }
+}
+
 // Create the Tic Tac Toe cells dynamically
 const boardElement = document.getElementById('board');
 for (let i = 0; i < 9; i++) {
@@ -89,9 +97,10 @@ for (let i = 0; i < 9; i++) {
     cell.addEventListener('click', () => handleCellClick(i));
     boardElement.appendChild(cell);
 }
+
 // Function to reset the game
 function resetGame() {
-    currentPlayer = 'X'; //Player X starts the game (later player "O" will be AI)
+    currentPlayer = 'X'; // Player X starts the game (later player "O" will be AI)
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     updateBoard();
 }
