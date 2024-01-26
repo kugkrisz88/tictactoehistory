@@ -43,7 +43,7 @@ The game's core mechanics have been implemented, including player turns, win-che
 
 ## Screenshots
 
-
+![PageScreenView](media/screenrespon.png)
 
 ## How to Play
 
